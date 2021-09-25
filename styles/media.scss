@@ -83,6 +83,7 @@ $mobile: 480px;
     }
   }
   .sidebar-nav {
+    display: flex;
     &__item {
       padding: 0 30px 16px 30px;
     }

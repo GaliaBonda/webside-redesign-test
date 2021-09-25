@@ -264,9 +264,6 @@ body {
   display: block;
 }
 
-.sidebar-nav {
-  display: flex;
-}
 .sidebar-nav__item {
   font-size: 14px;
   line-height: 22px;

@@ -68,6 +68,9 @@
     padding: 20px 30px 30px 30px;
   }
 
+  .sidebar-nav {
+    display: flex;
+  }
   .sidebar-nav__item {
     padding: 0 30px 16px 30px;
   }
