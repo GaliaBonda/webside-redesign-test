@@ -1,0 +1,311 @@
+$bg-color: #f7f6f3;
+$main-bg-color: #ffffff;
+$font: Helvetica, sans-serif;
+$font-color: #131313;
+$sidebar-bg-color: #000000;
+$sidebar-font-color: #ffffff;
+$sidebar-accent-color: #202020;
+$sidebar-font-subtext-color: #9b9b9b;
+$pic-bg: #febc0c;
+$more-font: #929191;
+$more-bg: #eaeaea;
+$active-font: #878787;
+$notifications-bg: #ffc200;
+$share-bg: #eaeaea;
+$chat-bg: #fff8dd;
+$record-icon-bg: #cef9c6;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  color: $font-color;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.all-content {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  max-width: 80%;
+  &__content {
+    padding: 30px 220px 20px 220px;
+  }
+}
+
+.header {
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: space-between;
+    padding: 40px 30px 20px 30px;
+  }
+  &__nav {
+    padding-left: 30px;
+    padding-bottom: 15px;
+  }
+}
+
+.nav {
+  display: flex;
+  column-gap: 30px;
+  &__item {
+    position: relative;
+  }
+  &__link--active::after {
+    content: "";
+    width: 100%;
+    background-color: $notifications-bg;
+    height: 2px;
+    position: absolute;
+    left: 0px;
+    bottom: -15px;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  &__icon {
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: $pic-bg;
+    border-radius: 8px;
+  }
+  &__text {
+    margin-right: 10px;
+    font-size: 32px;
+    line-height: 43px;
+  }
+  &__more {
+    color: $more-font;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: $more-bg;
+    border-radius: 50% 50%;
+    display: block;
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  &__photo {
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  &__share {
+    background-color: $share-bg;
+    padding: 6px 15px;
+    border-radius: 15px;
+  }
+  &__chat {
+    padding: 6px 15px;
+    background-color: $chat-bg;
+    border-radius: 15px;
+  }
+  &__chat-icon {
+    margin-right: 5px;
+  }
+}
+
+.content {
+  background-color: $bg-color;
+  &__container {
+    background-color: $main-bg-color;
+    border-radius: 8px;
+  }
+  &__date {
+    padding: 35px 0px 30px 30px;
+    opacity: 0.5;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  &__records {
+    padding: 0px 30px 20px 30px;
+  }
+  &__record {
+    padding-top: 30px;
+  }
+}
+
+.record {
+  &__info {
+    display: flex;
+    padding-bottom: 20px;
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  &__icon-special {
+    padding: 14px;
+    background-color: $record-icon-bg;
+    border-radius: 50%;
+  }
+  &__text {
+    width: 460px;
+    margin-right: 95px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &__date {
+    opacity: 0.7;
+    font-size: 14px;
+    line-height: 20px;
+    width: 53px;
+  }
+  &__details {
+    width: 77%;
+    margin-left: 12.5%;
+    margin-right: 20px;
+    background: $bg-color;
+    border-radius: 10px;
+    padding: 20px 30px;
+  }
+  &__details-text {
+    font-size: 15px;
+  }
+  &__album {
+    padding: 0px 12.5% 20px 12.5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  &__album-img {
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.sidebar {
+  width: 20%;
+  background-color: $sidebar-bg-color;
+  color: $sidebar-font-color;
+  &__person-info {
+    padding: 16px 20px 15px 30px;
+  }
+  &__tasks {
+    padding: 20px 60px 30px 30px;
+  }
+}
+
+.sidebar-header {
+  &__container {
+    padding: 30px 20px 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  &__main {
+    display: flex;
+    column-gap: 13px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+  }
+  &__text {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__search {
+    align-self: center;
+  }
+}
+
+.person-info {
+  background-color: $sidebar-accent-color;
+  display: flex;
+  justify-content: space-between;
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+  }
+  &__photo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__title {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 2px;
+  }
+  &__subtitle {
+    font-size: 12px;
+    color: $sidebar-font-subtext-color;
+    line-height: 14px;
+  }
+  &__more {
+    width: 16px;
+    color: $more-font;
+    font-size: 20px;
+    font-weight: bold;
+    align-self: center;
+  }
+}
+
+.tasks {
+  list-style-type: none;
+  display: flex;
+  column-gap: 20px;
+  &__item {
+    font-size: 12px;
+  }
+  &__item-text {
+    opacity: 0.5;
+  }
+  &__item-num {
+    font-size: 20px;
+    display: block;
+  }
+}
+
+.sidebar-nav {
+  display: flex;
+  &__item {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0 20px 16px 30px;
+  }
+  &__link--active {
+    color: $active-font;
+    text-transform: uppercase;
+  }
+  &__item--notifications::after {
+    content: "3";
+    width: 20px;
+    height: 20px;
+    background-color: $notifications-bg;
+    border-radius: 50%;
+    padding: 2px 7px;
+    color: $font-color;
+    margin-left: 9px;
+  }
+}

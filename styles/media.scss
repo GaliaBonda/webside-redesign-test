@@ -1,0 +1,129 @@
+$desktops: 1200px;
+$laptops: 1025px;
+$tablets: 768px;
+$landscape: 576px;
+$mobile: 480px;
+
+@media only screen and (max-width: $desktops) {
+  .sidebar {
+    &__person-info {
+      padding: 16px 10px 15px 20px;
+    }
+    &__tasks {
+      padding: 20px 20px 30px 20px;
+    }
+  }
+  .sidebar-nav {
+    &__item {
+      padding: 0 10px 16px 20px;
+    }
+  }
+  .main {
+    &__content {
+      padding: 30px 120px 20px 120px;
+    }
+  }
+}
+
+@media only screen and (max-width: $laptops) {
+  .main {
+    &__content {
+      padding: 30px 80px 20px 80px;
+    }
+  }
+  .sidebar {
+    &__person-info {
+      padding: 16px 10px 15px 20px;
+    }
+    &__tasks {
+      padding: 20px 15px 30px 20px;
+    }
+  }
+  .sidebar-nav {
+    &__item {
+      padding: 0 10px 16px 20px;
+    }
+  }
+  .sidebar-header {
+    &__container {
+      padding: 30px 15px 30px 20px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  .socials {
+    column-gap: 10px;
+  }
+  .record {
+    &__text {
+      font-size: 14px;
+    }
+    &__details-text {
+      font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablets) {
+  .all-content {
+    flex-direction: column;
+  }
+  .main {
+    max-width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+    &__person-info {
+      padding: 16px 30px 15px 30px;
+    }
+    &__tasks {
+      padding: 20px 30px 30px 30px;
+    }
+  }
+  .sidebar-nav {
+    &__item {
+      padding: 0 30px 16px 30px;
+    }
+  }
+  .sidebar-header {
+    &__container {
+      padding: 30px 30px 30px 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: $landscape) {
+  .main {
+    &__content {
+      padding: 30px 50px 20px 50px;
+    }
+  }
+  .record {
+    &__text {
+      margin-right: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .sidebar {
+    &__person-info {
+      padding: 16px 25px 15px 25px;
+    }
+    &__tasks {
+      padding: 20px 25px 30px 25px;
+    }
+  }
+  .sidebar-nav {
+    &__item {
+      padding: 0 25px 16px 25px;
+    }
+  }
+  .sidebar-header {
+    &__container {
+      padding: 30px 25px 30px 25px;
+    }
+  }
+}
