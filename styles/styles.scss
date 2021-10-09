@@ -75,17 +75,21 @@ body {
 .title {
   display: flex;
   align-items: center;
-  &__icon {
+  &__text {
+    margin-right: 10px;
+    font-size: 32px;
+  }
+  &__text::before {
+    content: "";
+    display: inline-block;
     margin-right: 15px;
     width: 40px;
     height: 40px;
     background-color: $pic-bg;
+    background-image: url("../assets/Shapes@2x.png");
+    background-size: 40px 40px;
     border-radius: 8px;
-  }
-  &__text {
-    margin-right: 10px;
-    font-size: 32px;
-    line-height: 43px;
+    vertical-align: middle;
   }
   &__more {
     color: $more-font;
@@ -97,7 +101,6 @@ body {
     display: block;
     height: 30px;
     width: 30px;
-    padding: 2px;
   }
 }
 
@@ -120,8 +123,10 @@ body {
     padding: 6px 15px;
     background-color: $chat-bg;
     border-radius: 15px;
+    color: $pic-bg;
   }
-  &__chat-icon {
+  &__chat::before {
+    content: url(../assets/Combined_Shape@1x.svg);
     margin-right: 5px;
   }
 }
@@ -151,22 +156,43 @@ body {
     display: flex;
     padding-bottom: 20px;
   }
-  &__icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-    border-radius: 50%;
-  }
-  &__icon-special {
-    padding: 14px;
-    background-color: $record-icon-bg;
-    border-radius: 50%;
-  }
   &__text {
     width: 460px;
     margin-right: 95px;
+    padding-left: 60px;
     font-size: 16px;
     line-height: 20px;
+    position: relative;
+  }
+  &__done::before {
+    content: url("../assets/Icon@3x.svg");
+    border-radius: 50%;
+    padding: 10px 14px;
+    background-color: $record-icon-bg;
+    position: absolute;
+    left: 0px;
+  }
+  &__comment::before {
+    content: "";
+    border-radius: 50%;
+    width: 43px;
+    height: 43px;
+    background-image: url("../assets/record_icon_2.jpg");
+    background-size: 43px 43px;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+  }
+  &__upload::before {
+    content: "";
+    border-radius: 50%;
+    width: 43px;
+    height: 43px;
+    background-image: url("../assets/record_icon_3.jpg");
+    background-size: 43px 43px;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
   }
   &__date {
     opacity: 0.7;
@@ -216,17 +242,20 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 5px;
-  }
-  &__main {
-    display: flex;
-    column-gap: 13px;
-    row-gap: 5px;
     flex-wrap: wrap;
   }
   &__text {
     text-transform: uppercase;
     font-size: 16px;
     line-height: 24px;
+    position: relative;
+    padding-left: 35px;
+  }
+  &__text::before {
+    content: url("../assets/Logo@3x.svg");
+    position: absolute;
+    top: 0px;
+    left: 0px;
   }
   &__search {
     align-self: center;
@@ -303,7 +332,7 @@ body {
     height: 20px;
     background-color: $notifications-bg;
     border-radius: 50%;
-    padding: 2px 7px;
+    padding: 2px 6px;
     color: $font-color;
     margin-left: 9px;
   }
