@@ -219,7 +219,7 @@ body {
   padding: 30px 20px 30px 30px;
   display: flex;
   justify-content: space-between;
-  gap: 5px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 .sidebar-header__text {
