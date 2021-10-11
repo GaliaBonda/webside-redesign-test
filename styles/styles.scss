@@ -237,19 +237,17 @@ body {
 }
 
 .sidebar-header {
-  &__container {
-    padding: 30px 20px 30px 30px;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
+  padding: 30px 20px 30px 30px;
+  // &__main {
+  //   padding: 30px 20px 30px 30px;
+  // }
   &__text {
     text-transform: uppercase;
     font-size: 16px;
     line-height: 24px;
     position: relative;
     padding-left: 35px;
+    padding-right: 80px;
   }
   &__text::before {
     content: url("../assets/Logo@3x.svg");
@@ -257,8 +255,11 @@ body {
     top: 0px;
     left: 0px;
   }
-  &__search {
-    align-self: center;
+  &__text::after {
+    content: url("../assets/Search@3x.svg");
+    position: absolute;
+    top: 0px;
+    right: 0px;
   }
 }
 

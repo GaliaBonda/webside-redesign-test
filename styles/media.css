@@ -75,7 +75,7 @@
     padding: 0 30px 16px 30px;
   }
 
-  .sidebar-header__container {
+  .sidebar-header {
     padding: 30px 30px 30px 30px;
   }
 }
@@ -100,7 +100,7 @@
     padding: 0 25px 16px 25px;
   }
 
-  .sidebar-header__container {
+  .sidebar-header {
     padding: 30px 25px 30px 25px;
   }
 }

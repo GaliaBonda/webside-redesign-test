@@ -215,12 +215,8 @@ body {
   padding: 20px 60px 30px 30px;
 }
 
-.sidebar-header__container {
+.sidebar-header {
   padding: 30px 20px 30px 30px;
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
 }
 .sidebar-header__text {
   text-transform: uppercase;
@@ -228,6 +224,7 @@ body {
   line-height: 24px;
   position: relative;
   padding-left: 35px;
+  padding-right: 80px;
 }
 .sidebar-header__text::before {
   content: url("../assets/Logo@3x.svg");
@@ -235,8 +232,11 @@ body {
   top: 0px;
   left: 0px;
 }
-.sidebar-header__search {
-  align-self: center;
+.sidebar-header__text::after {
+  content: url("../assets/Search@3x.svg");
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 .person-info {
