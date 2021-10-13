@@ -15,7 +15,9 @@ $share-bg: #eaeaea;
 $chat-bg: #fff8dd;
 $record-icon-bg: #cef9c6;
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -24,20 +26,20 @@ body {
   color: $font-color;
 }
 
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 .all-content {
   display: flex;
   justify-content: center;
 }
 
 .main {
-  max-width: 80%;
+  width: 80%;
+  min-height: 100vh;
   &__content {
-    padding: 30px 220px 20px 220px;
+    padding: 30px 220px 30px 220px;
+  }
+  &__container {
+    max-width: 1170px;
+    margin: 0 auto;
   }
 }
 
@@ -57,7 +59,8 @@ body {
 
 .nav {
   display: flex;
-  column-gap: 30px;
+  gap: 30px;
+  flex-wrap: wrap;
   &__item {
     position: relative;
   }
@@ -86,7 +89,7 @@ body {
     width: 40px;
     height: 40px;
     background-color: $pic-bg;
-    background-image: url("../assets/Shapes@2x.png");
+    background-image: url("../../assets/Shapes@2x.png");
     background-size: 40px 40px;
     border-radius: 8px;
     vertical-align: middle;
@@ -126,7 +129,7 @@ body {
     color: $pic-bg;
   }
   &__chat::before {
-    content: url(../assets/Combined_Shape@1x.svg);
+    content: url(../../assets/Combined_Shape@1x.svg);
     margin-right: 5px;
   }
 }
@@ -165,7 +168,7 @@ body {
     position: relative;
   }
   &__done::before {
-    content: url("../assets/Icon@3x.svg");
+    content: url("../../assets/Icon@3x.svg");
     border-radius: 50%;
     padding: 10px 14px;
     background-color: $record-icon-bg;
@@ -177,7 +180,7 @@ body {
     border-radius: 50%;
     width: 43px;
     height: 43px;
-    background-image: url("../assets/record_icon_2.jpg");
+    background-image: url("../../assets/record_icon_2.jpg");
     background-size: 43px 43px;
     display: inline-block;
     position: absolute;
@@ -188,7 +191,7 @@ body {
     border-radius: 50%;
     width: 43px;
     height: 43px;
-    background-image: url("../assets/record_icon_3.jpg");
+    background-image: url("../../assets/record_icon_3.jpg");
     background-size: 43px 43px;
     display: inline-block;
     position: absolute;
@@ -226,49 +229,49 @@ body {
 
 .sidebar {
   width: 20%;
+  min-height: 100vh;
   background-color: $sidebar-bg-color;
   color: $sidebar-font-color;
   &__person-info {
     padding: 16px 20px 15px 30px;
   }
-  &__tasks {
-    padding: 20px 60px 30px 30px;
+  &__tasks,
+  &__navigation {
+    padding: 20px 30px 30px 30px;
+  }
+  &__container {
+    max-width: 270px;
+    margin: 0 auto;
   }
 }
 
 .sidebar-header {
-  padding: 30px 20px 30px 30px;
-  // &__main {
-  //   padding: 30px 20px 30px 30px;
-  // }
+  &__top {
+    padding: 30px 20px 30px 30px;
+  }
   &__text {
     text-transform: uppercase;
     font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: center;
+    gap: 13px;
     line-height: 24px;
-    position: relative;
-    padding-left: 35px;
-    padding-right: 80px;
   }
   &__text::before {
-    content: url("../assets/Logo@3x.svg");
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    content: url("../../assets/Logo@3x.svg");
   }
   &__text::after {
-    content: url("../assets/Search@3x.svg");
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    content: url("../../assets/Search@3x.svg");
+    margin-left: 25%;
   }
 }
 
 .person-info {
   background-color: $sidebar-accent-color;
-  display: flex;
-  justify-content: space-between;
   &__main {
     display: flex;
+    //justify-content: center;
     flex-wrap: wrap;
     gap: 13px;
   }
@@ -297,16 +300,18 @@ body {
     color: $more-font;
     font-size: 20px;
     font-weight: bold;
-    align-self: center;
+    margin-left: 12%;
   }
 }
 
 .tasks {
   list-style-type: none;
   display: flex;
+  //justify-content: center;
   column-gap: 20px;
   &__item {
     font-size: 12px;
+    line-height: 18px;
   }
   &__item-text {
     opacity: 0.5;
@@ -321,7 +326,8 @@ body {
   &__item {
     font-size: 14px;
     line-height: 22px;
-    padding: 0 20px 16px 30px;
+    padding-bottom: 16px;
+    //padding: 0 20px 16px 30px;
   }
   &__link--active {
     color: $active-font;

@@ -1,8 +1,23 @@
+@import "styles";
+$hdscreen: 1400px;
 $desktops: 1200px;
 $laptops: 1025px;
 $tablets: 768px;
 $landscape: 576px;
 $mobile: 480px;
+
+@media only screen and (min-width: $hdscreen) {
+  .main {
+    &__container {
+      margin: 0 20px;
+    }
+  }
+  .sidebar {
+    &__container {
+      margin: 0 0 0 auto;
+    }
+  }
+}
 
 @media only screen and (max-width: $desktops) {
   .sidebar {
@@ -71,7 +86,7 @@ $mobile: 480px;
     flex-direction: column;
   }
   .main {
-    max-width: 100%;
+    width: 100%;
   }
   .sidebar {
     width: 100%;
@@ -83,7 +98,6 @@ $mobile: 480px;
     }
   }
   .sidebar-nav {
-    display: flex;
     &__item {
       padding: 0 30px 16px 30px;
     }
@@ -122,5 +136,22 @@ $mobile: 480px;
   }
   .sidebar-header {
     padding: 30px 25px 30px 25px;
+  }
+  .nav {
+    flex-direction: column;
+    &__link--active::after {
+      background-color: transparent;
+    }
+    &__link--active {
+      color: $notifications-bg;
+    }
+  }
+  .record {
+    &__album {
+      justify-content: center;
+    }
+    &__info {
+      flex-wrap: wrap;
+    }
   }
 }

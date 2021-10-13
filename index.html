@@ -7,31 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webside Redesign</title>
     <link rel="shortcut icon" type="image/png" href="assets/Shapes@2x.png">
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/media.css">
+    <link rel="stylesheet" href="./styles/css/normalize.css">
+    <link rel="stylesheet" href="./styles/css/reset.css">
+    <link rel="stylesheet" href="./styles/css/styles.css">
+    <link rel="stylesheet" href="./styles/css/media.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="all-content">
-            <section class="sidebar">
-                <header class="sidebar-header">
-                    <h2 class="sidebar-header__text">PROJECTUS</h2>
-                </header>
-                <div class="sidebar__content">
-                    <div class="person-info sidebar__person-info">
-                        <div class="person-info__main">
-                            <img src="./assets/person.png" alt="#" class="person-info__photo">
-                            <div class="person-info__titles">
-                                <h3 class="person-info__title">Jean Gonzales</h3>
-                                <h4 class="person-info__subtitle">Product Owner</h4>
-                            </div>
+    <!-- <div class="container"> -->
+    <div class="all-content">
+        <section class="sidebar">
+            <!-- <div class="sidebar__container"> -->
+            <header class="sidebar-header">
+                <div class="sidebar-header__top">
+                    <div class="sidebar__container">
+                        <h2 class="sidebar-header__text">PROJECTUS</h2>
+                    </div>
+                </div>
+
+            </header>
+            <!-- <div class="sidebar__content"> -->
+            <div class="person-info sidebar__person-info">
+                <div class="sidebar__container">
+                    <div class="person-info__main">
+                        <img src="./assets/person.png" alt="#" class="person-info__photo">
+                        <div class="person-info__titles">
+                            <h3 class="person-info__title">Jean Gonzales</h3>
+                            <h4 class="person-info__subtitle">Product Owner</h4>
                         </div>
                         <a href="#" class="person-info__more">...</a>
                     </div>
-                    <ul class="tasks sidebar__tasks">
+                </div>
+            </div>
+            <div class="sidebar__tasks">
+                <div class="sidebar__container">
+                    <ul class="tasks">
                         <li class="tasks__item"><span class="tasks__item-num">372</span> <span
                                 class="tasks__item-text">Completed
                                 Tasks</span></li>
@@ -39,6 +49,10 @@
                                 class="tasks__item-text">Open
                                 Tasks</span></li>
                     </ul>
+                </div>
+            </div>
+            <div class="sidebar__navigation">
+                <div class="sidebar__container">
                     <nav class="nav-container">
                         <ul class="sidebar-nav">
                             <li class="sidebar-nav__item"><a href="#"
@@ -51,9 +65,15 @@
                         </ul>
                     </nav>
                 </div>
-            </section>
-            <section class="main">
-                <header class="header">
+            </div>
+
+            <!-- </div> -->
+            <!-- </div> -->
+        </section>
+        <section class="main">
+            <!-- <div class="main__container"> -->
+            <header class="header">
+                <div class="main__container">
                     <div class="header__top">
                         <div class="title">
                             <h1 class="title__text">Website Redesign</h1>
@@ -78,8 +98,10 @@
                             <li class="nav__item"><a href="#" class="nav__link">Files</a></li>
                         </ul>
                     </nav>
-                </header>
-                <div class="content main__content">
+                </div>
+            </header>
+            <div class="content main__content">
+                <div class="main__container">
                     <div class="content__container">
                         <h2 class="content__date">Today</h2>
                         <div class="content__records">
@@ -129,9 +151,11 @@
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+            <!-- </div> -->
+        </section>
     </div>
+    <!-- </div> -->
     <script src="script/main.js"></script>
 </body>
 
