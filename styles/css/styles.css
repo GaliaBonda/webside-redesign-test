@@ -213,10 +213,10 @@ body {
   color: #ffffff;
 }
 .sidebar__person-info {
-  padding: 16px 20px 15px 30px;
+  padding: 16px 7% 15px 10%;
 }
 .sidebar__tasks, .sidebar__navigation {
-  padding: 20px 30px 30px 30px;
+  padding: 20px 11% 30px 10%;
 }
 .sidebar__container {
   max-width: 270px;
@@ -224,14 +224,14 @@ body {
 }
 
 .sidebar-header__top {
-  padding: 30px 20px 30px 30px;
+  padding: 30px 7% 30px 10%;
 }
 .sidebar-header__text {
   text-transform: uppercase;
   font-size: 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 13px;
+  gap: 4.8%;
   line-height: 24px;
 }
 .sidebar-header__text::before {
@@ -248,7 +248,7 @@ body {
 .person-info__main {
   display: flex;
   flex-wrap: wrap;
-  gap: 13px;
+  gap: 4.8%;
 }
 .person-info__photo {
   width: 48px;
