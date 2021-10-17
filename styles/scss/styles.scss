@@ -26,6 +26,10 @@ body {
   color: $font-color;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .all-content {
   display: flex;
   justify-content: center;

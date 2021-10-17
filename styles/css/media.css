@@ -9,6 +9,10 @@ body {
   color: #131313;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .all-content {
   display: flex;
   justify-content: center;
