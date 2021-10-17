@@ -309,7 +309,7 @@ button:hover {
   text-transform: uppercase;
 }
 .sidebar-nav__item--notifications::after {
-  content: "3";
+  content: attr(data-after);
   width: 20px;
   height: 20px;
   background-color: #ffc200;

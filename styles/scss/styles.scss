@@ -334,7 +334,7 @@ button:hover {
     text-transform: uppercase;
   }
   &__item--notifications::after {
-    content: "3";
+    content: attr(data-after);
     width: 20px;
     height: 20px;
     background-color: $notifications-bg;
