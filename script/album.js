@@ -3,13 +3,10 @@ const album = document.querySelector('.record__album');
 const picArray = [];
 for (let i = 0; i < album.children.length; i++) {
     picArray.push(album.children[i]);
+    album.children[i].addEventListener('click', changeNotifications);
+    album.children[i].addEventListener('mouseover', makePicActive);
+    album.children[i].addEventListener('mouseout', makePicNonActive);
 }
-
-picArray.forEach((photo) => {
-    photo.addEventListener('click', changeNotifications);
-    photo.addEventListener('mouseover', makePicActive);
-    photo.addEventListener('mouseout', makePicNonActive);
-})
 
 function changeNotifications(event) {
     const currentIndex = picArray.indexOf(event.target);
